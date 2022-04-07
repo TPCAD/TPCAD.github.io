@@ -9,7 +9,7 @@
     
     <title>
         
-            CNote |
+            C |
         
         Eulamber
     </title>
@@ -159,7 +159,7 @@
     <div class="article-content-container">
 
         <div class="article-title">
-            <span class="title-hover-animation">CNote</span>
+            <span class="title-hover-animation">C</span>
         </div>
 
         
@@ -182,6 +182,28 @@
         <span class="mobile">2022-03-21 12:03</span>
     </span>
     
+        <span class="article-categories article-meta-item">
+            <i class="fas fa-folder"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/categories/note/">note</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
+    
+    
+        <span class="article-tags article-meta-item">
+            <i class="fas fa-tags"></i>&nbsp;
+            <ul>
+                
+                    <li>
+                        <a href="/tags/C/">C</a>&nbsp;
+                    </li>
+                
+            </ul>
+        </span>
     
 
     
@@ -196,12 +218,12 @@
         
 
         <div class="article-content markdown-body">
-            <h1 id="C-Note"><a href="#C-Note" class="headerlink" title="C Note"></a>C Note</h1><p>笔记基于《C Prime Plus》、菜鸟教程等C语言教程。</p>
+            <h1 id="C"><a href="#C" class="headerlink" title="C"></a>C</h1><p>笔记基于《C Prime Plus》、菜鸟教程等C语言教程。</p>
 <p>操作系统：Ubuntu 20.04.4 LTS</p>
 <p>编译器：GCC 9.3.0</p>
 <h2 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h2><p>数据类型决定变量在内存中的存储大小以及如何存储。</p>
 <p>C 中各种类型的实际存储大小与系统位数有关，可以用 sizeof 运算符来获取某个类型在当前机器的存储大小。（在 GCC 下，sizeof 的返回值是 long 类型）</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">long a = sizeof(int);</span><br><span class="line">a = sizeof(char);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">long</span> a = <span class="keyword">sizeof</span>(<span class="type">int</span>);</span><br><span class="line">a = <span class="keyword">sizeof</span>(<span class="type">char</span>);</span><br></pre></td></tr></table></figure>
 
 <h3 id="整数类型"><a href="#整数类型" class="headerlink" title="整数类型"></a>整数类型</h3><table>
 <thead>
@@ -246,7 +268,7 @@
 <p>C 通常假定整数常量是十进制数。可以使用特定前缀来表示特定进制。</p>
 <p>八进制：0</p>
 <p>十六进制：0x 或 0X</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">//八进制</span><br><span class="line">int a = 012;</span><br><span class="line"></span><br><span class="line">//十六进制</span><br><span class="line">int b = 0x64;</span><br><span class="line">int c = 0X64；</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//八进制</span></span><br><span class="line"><span class="type">int</span> a = <span class="number">012</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment">//十六进制</span></span><br><span class="line"><span class="type">int</span> b = <span class="number">0x64</span>;</span><br><span class="line"><span class="type">int</span> c = <span class="number">0X64</span>；</span><br></pre></td></tr></table></figure>
 
 <p>除了常见的 int 类型外，还有 long int、long long int。</p>
 <p>C 通常把整数常量存储为 int 类型，如果想让其存储为 long 类型，可以在整数常量后加上 <code>l</code> 或 <code>L</code> 后缀。如 <code>88l</code>、<code>89L</code>。类似地，如果想让整数常量存储为 long long 类型，可以在其后加上 <code>ll</code> 或 <code>LL</code> 后缀。如 <code>8999ll</code>、<code>8789LL</code>。</p>
@@ -277,7 +299,7 @@
 </tbody></table>
 <p>根据编译器的不同，char 的取值范围也会有所不同。如在 GCC 下，char 的取值范围是 -128<del>127，而在有些编译器下，char 的取值范围是 0</del>255。</p>
 <p>C 中<strong>单引号</strong>括起来的字符表示字符常量。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">char a = &#x27;a&#x27;;</span><br><span class="line">char b = &#x27;U&#x27;;</span><br><span class="line">char c = 78; // 这样是可以的，但不推荐</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> a = <span class="string">&#x27;a&#x27;</span>;</span><br><span class="line"><span class="type">char</span> b = <span class="string">&#x27;U&#x27;</span>;</span><br><span class="line"><span class="type">char</span> c = <span class="number">78</span>; <span class="comment">// 这样是可以的，但不推荐</span></span><br></pre></td></tr></table></figure>
 
 <p>在 ASCII 编码表中，并不是所有字符都是可打印字符，还有一部分非打印字符。</p>
 <p>除了使用对应的整数外，还可以使用转移序列来表示这些字符。</p>
@@ -393,12 +415,12 @@
 <li>“x” 模式无法打开现有文件</li>
 </ol>
 <p>fopen( ) 函数返回 FILE 类型指针，若打开文件失败，会返回 NULL。在打开文件时应该对检查文件是否正确打开。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line">if ((fp = fopen(&quot;name.txt&quot;, &quot;w&quot;)) == NULL)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;Error!\n&quot;);</span><br><span class="line">    exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">FILE *fp;</span><br><span class="line"><span class="keyword">if</span> ((fp = fopen(<span class="string">&quot;name.txt&quot;</span>, <span class="string">&quot;w&quot;</span>)) == <span class="literal">NULL</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Error!\n&quot;</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h4 id="关闭文件"><a href="#关闭文件" class="headerlink" title="关闭文件"></a>关闭文件</h4><p>使用 fclose( ) 函数关闭文件。</p>
 <p>fclose( ) 函数接受一个 FILE 类型指针作参数。若关闭成功返回 0，失败则返回 EOF。</p>
 <p>在文件使用完毕后应及时关闭文件，并检查是否关闭成功。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">if (fclose(fp) != 0)</span><br><span class="line">&#123;</span><br><span class="line">    printf(&quot;Error!\n&quot;);</span><br><span class="line">    exit(0);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">if</span> (fclose(fp) != <span class="number">0</span>)</span><br><span class="line">&#123;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Error!\n&quot;</span>);</span><br><span class="line">    <span class="built_in">exit</span>(<span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <h3 id="文件-I-x2F-O-函数"><a href="#文件-I-x2F-O-函数" class="headerlink" title="文件 I&#x2F;O 函数"></a>文件 I&#x2F;O 函数</h3><h3 id="文件结尾"><a href="#文件结尾" class="headerlink" title="文件结尾"></a>文件结尾</h3><p>程序读到文件末尾的时候会返回一个特殊值 EOF。</p>
 <h3 id="指向标准文件的指针"><a href="#指向标准文件的指针" class="headerlink" title="指向标准文件的指针"></a>指向标准文件的指针</h3><p>stdio.h 头文件把 3 个文件指针与 3 个标准文件相关联，C 程序会自动打开这 3 个标准文件。</p>
@@ -426,26 +448,34 @@
 <td>显示器</td>
 </tr>
 </tbody></table>
-<h3 id="getc-与-putc"><a href="#getc-与-putc" class="headerlink" title="getc( ) 与 putc( )"></a>getc( ) 与 putc( )</h3><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int getc(FILE *fp);</span><br></pre></td></tr></table></figure>
+<h3 id="getc-与-putc"><a href="#getc-与-putc" class="headerlink" title="getc( ) 与 putc( )"></a>getc( ) 与 putc( )</h3><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">getc</span><span class="params">(FILE *fp)</span>;</span><br></pre></td></tr></table></figure>
 
 <p>getc( ) 从 fp 所指向的文件中读取一个字符，并返回该字符。若读取错误或读取到末尾则返回 EOF。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">int putc(int ch, FILE * fp)</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">putc</span><span class="params">(<span class="type">int</span> ch, FILE * fp)</span></span><br></pre></td></tr></table></figure>
 
 <p>putc( ) 把 ch 写入 fp 所指的输出流（文件或屏幕）。写入成功则返回写入字符，失败则返回 EOF。</p>
 <h3 id="fprintf-与-fscanf"><a href="#fprintf-与-fscanf" class="headerlink" title="fprintf( ) 与 fscanf( )"></a>fprintf( ) 与 fscanf( )</h3><p>函数原型：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">int fscanf(FILE * stream, const char * format, [argument...]);</span><br><span class="line">int fprintf( FILE *stream, const char *format, [ argument ]...)</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">int</span> <span class="title function_">fscanf</span><span class="params">(FILE * stream, <span class="type">const</span> <span class="type">char</span> * format, [argument...])</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fprintf</span><span class="params">( FILE *stream, <span class="type">const</span> <span class="type">char</span> *format, [ argument ]...)</span></span><br></pre></td></tr></table></figure>
 
 <p>fprintf( ) 与 fscanf( ) 和 printf( ) 与 scanf( ) 的用法类似，但第一个参数是文件指针。</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">fprintf(fp, &quot;%s %s %d\n&quot;, name, sex, ID);</span><br><span class="line">fscanf(fp, &quot;%s %s %d\n&quot;, name, sex, &amp;ID);</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">fprintf</span>(fp, <span class="string">&quot;%s %s %d\n&quot;</span>, name, sex, ID);</span><br><span class="line"><span class="built_in">fscanf</span>(fp, <span class="string">&quot;%s %s %d\n&quot;</span>, name, sex, &amp;ID);</span><br></pre></td></tr></table></figure>
 
 <p>fprintf( ) 将参数值写入文件，fscanf( ) 将读取内容写入对应参数。</p>
 <p>fscanf( ) 会返回读取成功的参数个数，若读取错误或读取到文件末尾时返回 EOF（可用与判断读取结束）。</p>
 <h3 id="fputs-与-fgets"><a href="#fputs-与-fgets" class="headerlink" title="fputs( ) 与 fgets( )"></a>fputs( ) 与 fgets( )</h3><p>函数原型：</p>
-<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">char *fgets( char *buf, int n, FILE *fp );</span><br><span class="line">int fputs( const char *s, FILE *fp );</span><br></pre></td></tr></table></figure>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="type">char</span> *<span class="title function_">fgets</span><span class="params">( <span class="type">char</span> *buf, <span class="type">int</span> n, FILE *fp )</span>;</span><br><span class="line"><span class="type">int</span> <span class="title function_">fputs</span><span class="params">( <span class="type">const</span> <span class="type">char</span> *s, FILE *fp )</span>;</span><br></pre></td></tr></table></figure>
         </div>
 
         
 
+        
+            <ul class="post-tags-box">
+                
+                    <li class="tag-item">
+                        <a href="/tags/C/">#C</a>&nbsp;
+                    </li>
+                
+            </ul>
         
 
         
@@ -473,7 +503,7 @@
                            href="/2022/03/07/ZShell/"
                         >
                             <span class="title flex-center">
-                                <span class="post-nav-title-item">ZShellNote</span>
+                                <span class="post-nav-title-item">ZShell</span>
                                 <span class="post-nav-item">下一篇</span>
                             </span>
                             <span class="right arrow-icon flex-center">
@@ -584,7 +614,7 @@
         <aside class="page-aside">
             <div class="post-toc-wrap">
     <div class="post-toc">
-        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C-Note"><span class="nav-text">C Note</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="nav-text">字符类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%8C%87%E9%92%88"><span class="nav-text">文件指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80-x2F-%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="nav-text">打开&#x2F;关闭文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="nav-text">打开文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="nav-text">关闭文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6-I-x2F-O-%E5%87%BD%E6%95%B0"><span class="nav-text">文件 I&#x2F;O 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE"><span class="nav-text">文件结尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E5%90%91%E6%A0%87%E5%87%86%E6%96%87%E4%BB%B6%E7%9A%84%E6%8C%87%E9%92%88"><span class="nav-text">指向标准文件的指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getc-%E4%B8%8E-putc"><span class="nav-text">getc( ) 与 putc( )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fprintf-%E4%B8%8E-fscanf"><span class="nav-text">fprintf( ) 与 fscanf( )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fputs-%E4%B8%8E-fgets"><span class="nav-text">fputs( ) 与 fgets( )</span></a></li></ol></li></ol></li></ol>
+        <ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#C"><span class="nav-text">C</span></a><ol class="nav-child"><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B"><span class="nav-text">数据类型</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%95%B4%E6%95%B0%E7%B1%BB%E5%9E%8B"><span class="nav-text">整数类型</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E5%AD%97%E7%AC%A6%E7%B1%BB%E5%9E%8B"><span class="nav-text">字符类型</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%93%8D%E4%BD%9C"><span class="nav-text">文件操作</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E6%8C%87%E9%92%88"><span class="nav-text">文件指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%89%93%E5%BC%80-x2F-%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="nav-text">打开&#x2F;关闭文件</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6"><span class="nav-text">打开文件</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#%E5%85%B3%E9%97%AD%E6%96%87%E4%BB%B6"><span class="nav-text">关闭文件</span></a></li></ol></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6-I-x2F-O-%E5%87%BD%E6%95%B0"><span class="nav-text">文件 I&#x2F;O 函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%96%87%E4%BB%B6%E7%BB%93%E5%B0%BE"><span class="nav-text">文件结尾</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#%E6%8C%87%E5%90%91%E6%A0%87%E5%87%86%E6%96%87%E4%BB%B6%E7%9A%84%E6%8C%87%E9%92%88"><span class="nav-text">指向标准文件的指针</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#getc-%E4%B8%8E-putc"><span class="nav-text">getc( ) 与 putc( )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fprintf-%E4%B8%8E-fscanf"><span class="nav-text">fprintf( ) 与 fscanf( )</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#fputs-%E4%B8%8E-fgets"><span class="nav-text">fputs( ) 与 fgets( )</span></a></li></ol></li></ol></li></ol>
     </div>
 </div>
         </aside>
